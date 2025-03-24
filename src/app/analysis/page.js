@@ -72,12 +72,6 @@ function AnalysisContent() {
 
     return (
       <main className="container mx-auto max-w-4xl p-4 space-y-4">
-        <a
-          href="/"
-          className="bg-gray-200 rounded-lg shadow hover:bg-gray-300 transition p-2 w-xs max-w-xs mx-auto sm:items-center"
-        >
-          ← Back
-        </a>
 
         <Header genreInfo={genreInfo} artistName={artist_name} />
 
@@ -87,6 +81,14 @@ function AnalysisContent() {
           <FilmMediaCompatibility data={data} />
           <SoundtrackConsiderations data={data} />
         </section>
+        <div>
+        <a
+          href="/"
+          className="bg-gray-200 rounded-lg shadow hover:bg-gray-300 transition p-2 w-xs max-w-xs mx-auto sm:items-center"
+        >
+          ← Back
+        </a>
+        </div>
       </main>
     );
   }

@@ -51,15 +51,21 @@ export default function HomePage() {
 
   
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen px-4 bg-gradient-to-br from-blue-50 to-gray-100">
+    <div className="flex flex-col items-center justify-start min-h-screen px-4 bg-gradient-to-br from-blue-50 to-gray-100 pt-16">
       <motion.h1 
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
         className="text-4xl font-extrabold text-gray-800 mb-6 text-center"
       >
-        MediaMatch Artist Placement Profiler
+        SoundMatch Profiler
       </motion.h1>
+  
+      {/* Adjust the paragraph text position here */}
+      <p className="text-lg text-gray-700 mb-4 text-center max-w-3xl">
+        Unveil an artist's musical identity, market positioning, media placement compatibility, and soundtrack consideration. 
+        SoundMatch is a proprietary AI solution for music supervisors, music producers, labels, artists, and fans alike.
+      </p>
       
       <motion.div 
         initial={{ opacity: 0, scale: 0.9 }}

@@ -6,7 +6,7 @@ import TechnicalNotes from "./soundtrack/TechnicalNotes";
 
 export default function SoundtrackConsiderations({data}) {
 
-  const emotionalImpact = data.data.analysis.impact;
+  const emotionalImpact = data.data.analysis.impact_statements;
   const bestUsage = data.data.analysis.best_uses;
   const soundElements = data.data.analysis.sound_elements;
   const technicalDetails = data.data.analysis.technical_details;

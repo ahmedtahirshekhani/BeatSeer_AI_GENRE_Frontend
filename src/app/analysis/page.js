@@ -11,6 +11,10 @@ import Modal from "../components/Modal";
 function AnalysisContent() {
   const searchParams = useSearchParams();
   const artist = searchParams.get("artist");
+  const genre = searchParams.get("genre");
+  const projected_growth = searchParams.get("projected_growth");
+  const genre_compatibility = searchParams.get("genre_compatibility");
+  const artist_country = searchParams.get("artist_country");
 
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -18,7 +22,7 @@ function AnalysisContent() {
 
   useEffect(() => {
     if (artist) {
-      fetch(`/api/artistAnalysis?artist=${artist}`)
+      fetch(`/api/artistAnalysis?artist=${artist}&genre=${genre}&projected_growth=${projected_growth}&genre_compatibility=${genre_compatibility}&artist_country=${artist_country}`)
         .then((res) => res.json())
         .then((result) => {
           console.log("Result:", result);

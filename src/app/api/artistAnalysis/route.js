@@ -5,6 +5,10 @@ import axios from "axios";
 export async function GET(request) {
   const { searchParams } = new URL(request.url);
   const artist = searchParams.get('artist');
+  const genre = searchParams.get('genre');
+  const projected_growth = searchParams.get('projected_growth');
+  const genre_compatibility = searchParams.get('genre_compatibility');
+  const artist_country = searchParams.get('artist_country');
 
   if (!artist) {
     return new Response(JSON.stringify({ message: "Artist is required" }), {
@@ -24,7 +28,11 @@ export async function GET(request) {
 
     const apiRes = await axios.get(`${process.env.BACKEND}/artist-analysis`, {
       params: { 
-        artist,
+        artist: artist,
+        genre: genre,
+        projected_growth: projected_growth,
+        genre_compatibility: genre_compatibility,
+        artist_country: artist_country,
         // youTubeApiKey: data?.YouTube?.YouTubeAPI, // Replace with your actual API key
         spotify_CLIENT_ID: "6e7e4b94f2004db982218c63dd735a74", // Replace with your actual API key
         spotify_CLIENT_SECRET: "ed0ff44ae35e4f8ab1d8e8aa582dc983", // Replace with your actual API key

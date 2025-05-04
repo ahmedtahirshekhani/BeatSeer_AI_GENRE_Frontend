@@ -45,8 +45,6 @@ export default function HomePage() {
 
   const handleSubmit = async () => {
         router.push(`/analysis?artist=${artist}`);
-
-    
   };
 
   
